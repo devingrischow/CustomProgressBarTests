@@ -8,12 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var testCalc:CGFloat = 0.4 * 100
+    
+    @State private var percent:CGFloat = 50
+    
+    
+    
+    
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            
+            BasicCustomBar(width: 350, height: 30, percent: $testCalc, progressColor: .yellow, backgroundColor: .gray, textColor: .white)
+            
         }
         .padding()
     }
